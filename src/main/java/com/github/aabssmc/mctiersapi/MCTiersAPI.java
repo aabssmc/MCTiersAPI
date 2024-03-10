@@ -1,7 +1,7 @@
-package com.github.aabssmc;
+package com.github.aabssmc.mctiersapi;
 
-import com.github.aabssmc.api.RankType;
-import com.github.aabssmc.api.TierPlayer;
+import com.github.aabssmc.mctiersapi.api.RankType;
+import com.github.aabssmc.mctiersapi.api.TierPlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;

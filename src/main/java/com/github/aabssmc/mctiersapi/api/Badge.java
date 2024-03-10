@@ -1,4 +1,4 @@
-package com.github.aabssmc.api;
+package com.github.aabssmc.mctiersapi.api;
 
 import org.json.JSONObject;
 
