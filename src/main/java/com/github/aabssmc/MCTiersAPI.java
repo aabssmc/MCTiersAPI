@@ -14,9 +14,16 @@ import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * McTiersAPI class.
+ */
 @SuppressWarnings("unused")
 public class MCTiersAPI {
 
+    /**
+     * @param NameOrUUID The name or uuid of the player.
+     * @return The tier player.
+     */
     @Nullable
     public static TierPlayer getPlayer(String NameOrUUID){
         String uuid;
@@ -30,6 +37,10 @@ public class MCTiersAPI {
         return new TierPlayer(new JSONObject(body));
     }
 
+    /**
+     * @param size The amount of players.
+     * @return The top players.
+     */
     @Nullable
     public static List<TierPlayer> getTopPlayers(Integer size){
         if (size <= 50 && size>= 1) {
@@ -45,6 +56,11 @@ public class MCTiersAPI {
         }
     }
 
+    /**
+     * @param size Not sure how this works lmao.
+     * @param rank The type of ranking you want.
+     * @return The top players.
+     */
     @Nullable
     public static List<TierPlayer> getTopPlayers(Integer size, RankType rank){
         if (size <= 50 && size>= 1) {
@@ -74,6 +90,10 @@ public class MCTiersAPI {
         }
     }
 
+    /**
+     * @param name The name of a player
+     * @return The uuid of the player
+     */
     static String getUUID(String name) {
         JSONObject json = new JSONObject(request("https://api.mojang.com/users/", "profiles/minecraft/" + name));
         return json.getString("id");
