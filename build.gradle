@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.github.aabssmc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:24.0.0'
+    implementation 'org.json:json:20231013'
+}
+
+test {
+    useJUnitPlatform()
+}
